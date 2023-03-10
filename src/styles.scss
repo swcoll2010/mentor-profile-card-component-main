@@ -13,7 +13,7 @@ body {
   background: url('./assets/images/bg-pattern-top.svg'),
               url('./assets/images/bg-pattern-bottom.svg');
   background-repeat: no-repeat, no-repeat;
-  background-position: top left, bottom right;
+  background-position: top -550px left -66%, bottom -650px right -50%;
   background-color: $clr-primary-100;
 
 }
