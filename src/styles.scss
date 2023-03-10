@@ -1,0 +1,61 @@
+@import 'reset';
+@import 'colors';
+@import 'fonts';
+@import 'variables';
+
+body {
+  font-family: $ff-normal;
+  font-weight: $fw-normal;
+  font-size: $fs-normal;
+  line-height: $lh-normal;
+  background: royalblue;
+  color: $clr-neutral-400;
+}
+
+main {
+  height: 100%;
+  margin: 3rem 1rem;
+}
+
+.profile {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
+  border-radius: 0.5rem;
+}
+
+.profile > * {
+  flex: 1 0;
+}
+
+.profile__img {
+  border-radius: 50%;
+  border-width: 3px;
+  border-color: $clr-neutral-100;
+}
+
+.profile__body,
+.profile__footer {
+  background-color: $clr-neutral-100;
+  text-align: center;
+}
+
+.profile__body {
+  width: 100%;
+}
+
+.profile__personal {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.profile__footer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 2px solid black;
+}
