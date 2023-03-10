@@ -10,6 +10,12 @@ body {
   line-height: $lh-normal;
   background: royalblue;
   color: $clr-neutral-400;
+  background: url('./assets/images/bg-pattern-top.svg'),
+              url('./assets/images/bg-pattern-bottom.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom right;
+  background-color: $clr-primary-100;
+
 }
 
 main {
@@ -18,23 +24,25 @@ main {
 }
 
 .profile {
+  position: relative;
   width: 100%;
-  max-width: 500px;
+  max-width: 380px;
+  padding-top: 8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: red;
-  border-radius: 0.5rem;
-}
-
-.profile > * {
-  flex: 1 0;
+  background: url('./assets/images/bg-pattern-card.svg') blue repeat;
+  background-size: contain;
+  border-radius: $br-normal;
 }
 
 .profile__img {
+  position: absolute;
+  top: 72px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid $clr-neutral-100;
   border-radius: 50%;
-  border-width: 3px;
-  border-color: $clr-neutral-100;
 }
 
 .profile__body,
@@ -45,6 +53,13 @@ main {
 
 .profile__body {
   width: 100%;
+  padding: 5rem 0 1.5rem;
+}
+
+.profile__person-name,
+.profile__footer-total {
+  font-weight: $fw-bold;
+  color: $clr-primary-600;
 }
 
 .profile__personal {
@@ -53,9 +68,23 @@ main {
   gap: .5rem;
 }
 
+.profile__person-location {
+  font-size: 0.9rem;
+}
+
 .profile__footer {
   width: 100%;
+  padding: 1.5rem 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: 2px solid black;
+  border-top: 1px solid $clr-neutral-400;
+  border-radius: 0 0 $br-normal $br-normal;
+}
+
+.profile__footer-section {
+  font-size: 0.75rem;
+}
+
+.profile__footer-total {
+  font-size: $fs-normal;
 }
