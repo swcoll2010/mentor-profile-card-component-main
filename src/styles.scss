@@ -20,7 +20,9 @@ body {
 
 main {
   height: 100%;
-  margin: 3rem 1rem;
+  display: grid;
+  grid-auto-columns: minmax(auto, 380px);
+  place-content: center;
 }
 
 .profile {
@@ -53,7 +55,7 @@ main {
 
 .profile__body {
   width: 100%;
-  padding: 5rem 0 1.5rem;
+  padding: 4rem 0 1.5rem;
 }
 
 .profile__person-name,
@@ -69,7 +71,7 @@ main {
 }
 
 .profile__person-location {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
 .profile__footer {
@@ -77,14 +79,16 @@ main {
   padding: 1.5rem 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid $clr-neutral-400;
+  border-top: 1px solid $clr-neutral-200;
   border-radius: 0 0 $br-normal $br-normal;
 }
 
 .profile__footer-section {
   font-size: 0.75rem;
+  letter-spacing: 1px;
 }
 
 .profile__footer-total {
   font-size: $fs-normal;
+  letter-spacing: normal;
 }
